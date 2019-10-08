@@ -1,52 +1,52 @@
--- CREATE TABLE classmates (
---     name TEXT,
---     age INT,
---     address TEXT
--- );
+CREATE TABLE classmates (
+    name TEXT,
+    age INT,
+    address TEXT
+);
 
--- -- CREATE
--- INSERT INTO classmates (name, age, address)
--- VALUES ('오창희', 11, '광주');
+-- CREATE
+INSERT INTO classmates (name, age, address)
+VALUES ('오창희', 11, '광주');
 
--- -- 확인
--- SELECT * FROM classmates;
+-- 확인
+SELECT * FROM classmates;
 
--- -- CREATE
--- INSERT INTO classmates (name, address)
--- VALUES ('오창희', '광주');
+-- CREATE
+INSERT INTO classmates (name, address)
+VALUES ('오창희', '광주');
 
--- -- 확인
--- SELECT * FROM classmates;
+-- 확인
+SELECT * FROM classmates;
 
--- -- CREATE
--- INSERT INTO classmates
--- VALUES ('홍길동', 30, '서울');
+-- CREATE
+INSERT INTO classmates
+VALUES ('홍길동', 30, '서울');
 
--- -- 확인
--- SELECT rowid, * FROM classmates;
+-- 확인
+SELECT rowid, * FROM classmates;
 
--- -- 테이블 삭제(초기화)
--- DROP TABLE classmates;
+-- 테이블 삭제(초기화)
+DROP TABLE classmates;
 
--- ----------------------
+----------------------
 
--- -- Table 다시 만들기
--- .tables
+-- Table 다시 만들기
+.tables
 
--- -- 기본으로 제공하는 rowid를 사용
--- CREATE TABLE classmates (
---     -- id INTEGER PRIMARY KEY, -- PRIMARY KEY는 INTEGER로 써야한다.
---     name TEXT NOT NULL,
---     age INT NOT NULL,
---     address TEXT NOT NULL
--- );
+-- 기본으로 제공하는 rowid를 사용
+CREATE TABLE classmates (
+    -- id INTEGER PRIMARY KEY, -- PRIMARY KEY는 INTEGER로 써야한다.
+    name TEXT NOT NULL,
+    age INT NOT NULL,
+    address TEXT NOT NULL
+);
 
--- INSERT INTO classmates (name, age, address)
--- VALUES ('김규리', 24, '광주');
+INSERT INTO classmates (name, age, address)
+VALUES ('김규리', 24, '광주');
 
--- SELECT rowid, * FROM classmates;
+SELECT rowid, * FROM classmates;
 
--- DROP TABLE classmates;
+DROP TABLE classmates;
 
 --------------------------
 
