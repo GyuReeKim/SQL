@@ -1,58 +1,57 @@
-CREATE TABLE classmates (
-    name TEXT,
-    age INT,
-    address TEXT
-);
+-- CREATE TABLE classmates (
+--     name TEXT,
+--     age INT,
+--     address TEXT
+-- );
 
--- CREATE
-INSERT INTO classmates (name, age, address)
-VALUES ('오창희', 11, '광주');
+-- -- CREATE
+-- INSERT INTO classmates (name, age, address)
+-- VALUES ('오창희', 11, '광주');
 
--- 확인
-SELECT * FROM classmates;
+-- -- 확인
+-- SELECT * FROM classmates;
 
--- CREATE
-INSERT INTO classmates (name, address)
-VALUES ('오창희', '광주');
+-- -- CREATE
+-- INSERT INTO classmates (name, address)
+-- VALUES ('오창희', '광주');
 
--- 확인
-SELECT * FROM classmates;
+-- -- 확인
+-- SELECT * FROM classmates;
 
--- CREATE
-INSERT INTO classmates
-VALUES ('홍길동', 30, '서울');
+-- -- CREATE
+-- INSERT INTO classmates
+-- VALUES ('홍길동', 30, '서울');
 
--- 확인
-SELECT rowid, * FROM classmates;
+-- -- 확인
+-- SELECT rowid, * FROM classmates;
 
--- 테이블 삭제(초기화)
-DROP TABLE classmates;
+-- -- 테이블 삭제(초기화)
+-- DROP TABLE classmates;
 
-----------------------
+-- ----------------------
 
--- Table 다시 만들기
-.tables
+-- -- Table 다시 만들기
+-- .tables
 
--- 기본으로 제공하는 rowid를 사용
-CREATE TABLE classmates (
-    -- id INTEGER PRIMARY KEY, -- PRIMARY KEY는 INTEGER로 써야한다.
-    name TEXT NOT NULL,
-    age INT NOT NULL,
-    address TEXT NOT NULL
-);
+-- -- 기본으로 제공하는 rowid를 사용
+-- CREATE TABLE classmates (
+--     -- id INTEGER PRIMARY KEY, -- PRIMARY KEY는 INTEGER로 써야한다.
+--     name TEXT NOT NULL,
+--     age INT NOT NULL,
+--     address TEXT NOT NULL
+-- );
 
-INSERT INTO classmates (name, age, address)
-VALUES ('김규리', 24, '광주');
+-- INSERT INTO classmates (name, age, address)
+-- VALUES ('김규리', 24, '광주');
 
-SELECT rowid, * FROM classmates;
+-- SELECT rowid, * FROM classmates;
 
-DROP TABLE classmates;
+-- DROP TABLE classmates;
 
 --------------------------
 
 -- Table 다시다시 만들기
 CREATE TABLE classmates (
-    -- id INTEGER PRIMARY KEY, -- PRIMARY KEY는 INTEGER로 써야한다.
     name TEXT NOT NULL,
     age INT NOT NULL,
     address TEXT NOT NULL
@@ -68,9 +67,10 @@ VALUES
 -- 특정 column 가져오기
 SELECT rowid, name FROM classmates;
 -- LIMIT
-SELECT rowid, name FROM classmates LIMIT 1;
+SELECT rowid, name FROM classmates LIMIT 1; -- LIMIT만큼 출력
 -- OFFSET (앞의 몇개를 skip)
-SELECT rowid, name FROM classmates LIMIT 1 OFFSET 2;
+SELECT rowid, name FROM classmates LIMIT 1 OFFSET 2; -- OFFSET만큼 건너뛰고 LIMIT만큼 출력
+-- SELECT rowid, name FROM classmates 2, 1; -- OFFSET: 2, Limit: 1
 -- WHERE
 SELECT rowid, name FROM classmates WHERE address="서울";
 -- 중복제거
